@@ -80,7 +80,7 @@ hook.Add( "PlayerDisconnected", "Remove RTV", function( ply )
 end )
 
 function RTV.CanVote( ply )
-	local plyCount = table.Count(player.GetAll())
+	local plyCount = player.GetCount()
 	
 	if RTV._ActualWait >= CurTime() then
 		return false, "You must wait a bit before voting!"
